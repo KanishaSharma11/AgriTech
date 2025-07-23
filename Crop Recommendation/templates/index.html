@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Recommendation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #2e7d32;
+      font-size: 26px;
+    }
+
+    form input,
+    form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    form input:focus {
+      border-color: #66bb6a;
+      box-shadow: 0 0 5px rgba(102, 187, 106, 0.4);
+    }
+
+    form button {
+      background-color: #2e7d32;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌾 Crop Recommendation System</h1>
+    <form action="/predict" method="POST">
+      <input type="number" name="N" placeholder="Nitrogen (N)" required>
+      <input type="number" name="P" placeholder="Phosphorus (P)" required>
+      <input type="number" name="K" placeholder="Potassium (K)" required>
+      <input type="number" name="temperature" placeholder="Temperature (°C)" step="0.1" required>
+      <input type="number" name="humidity" placeholder="Humidity (%)" step="0.1" required>
+      <input type="number" name="ph" placeholder="pH" step="0.01" required>
+      <input type="number" name="rainfall" placeholder="Rainfall (mm)" step="0.1" required>
+      <button type="submit">🌿 Predict Crop</button>
+    </form>
+  </div>
+</body>
+</html>
