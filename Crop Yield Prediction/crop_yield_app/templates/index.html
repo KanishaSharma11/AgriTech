@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Crop Yield Prediction</h1>
+    <form method="post">
+        <label>Crop:</label>
+        <select name="crop">
+            <option value="Arecanut">Arecanut</option>
+            <option value="Arhar/Tur">Arhar/Tur</option>
+            <option value="Bajra">Bajra</option>
+            <option value="Banana">Banana</option>
+            <option value="Barley">Barley</option>
+            <option value="Black pepper">Black pepper</option>
+            <option value="Cardamom">Cardamom</option>
+            <option value="Cashewnut">Cashewnut</option>
+            <option value="Castor seed">Castor seed</option>
+            <option value="Coconut">Coconut</option>
+            <option value="Coriander">Coriander</option>
+            <option value="Cotton(lint)">Cotton(lint)</option>
+            <option value="Cowpea(Lobia)">Cowpea(Lobia)</option>
+            <option value="Dry chillies">Dry chillies</option>
+            <option value="Garlic">Garlic</option>
+            <option value="Ginger">Ginger</option>
+            <option value="Gram">Gram</option>
+            <option value="Groundnut">Groundnut</option>
+            <option value="Guar seed">Guar seed</option>
+            <option value="Horse-gram">Horse-gram</option>
+            <option value="Jowar">Jowar</option>
+            <option value="Jute">Jute</option>
+            <option value="Khesari">Khesari</option>
+            <option value="Linseed">Linseed</option>
+            <option value="Maize">Maize</option>
+            <option value="Masoor">Masoor</option>
+            <option value="Mesta">Mesta</option>
+            <option value="Moong(Green Gram)">Moong(Green Gram)</option>
+            <option value="Moth">Moth</option>
+            <option value="Niger seed">Niger seed</option>
+            <option value="Oilseeds total">Oilseeds total</option>
+            <option value="Onion">Onion</option>
+            <option value="Other  Rabi pulses">Other  Rabi pulses</option>
+            <option value="Other Cereals">Other Cereals</option>
+            <option value="Other Kharif pulses">Other Kharif pulses</option>
+            <option value="Other Summer Pulses">Other Summer Pulses</option>
+            <option value="Peas & beans (Pulses)">Peas & beans (Pulses)</option>
+            <option value="Potato">Potato</option>
+            <option value="Ragi">Ragi</option>
+            <option value="Rapeseed &Mustard">Rapeseed &Mustard</option>
+            <option value="Rice">Rice</option>
+            <option value="Safflower">Safflower</option>
+            <option value="Sannhamp">Sannhamp</option>
+            <option value="Sesamum">Sesamum</option>
+            <option value="Small millets">Small millets</option>
+            <option value="Soyabean">Soyabean</option>
+            <option value="Sugarcane">Sugarcane</option>
+            <option value="Sunflower">Sunflower</option>
+            <option value="Sweet potato">Sweet potato</option>
+            <option value="Tapioca">Tapioca</option>
+            <option value="Tobacco">Tobacco</option>
+            <option value="Turmeric">Turmeric</option>
+            <option value="Urad">Urad</option>
+            <option value="Wheat">Wheat</option>
+            <option value="other oilseeds">other oilseeds</option>
+        </select>
+
+        <label>Crop Year:</label>
+<select name="year" required>
+    <option value="1997">1997</option>
+    <option value="1998">1998</option>
+    <option value="1999">1999</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+    <option value="2028">2028</option>
+    <option value="2029">2029</option>
+    <option value="2030">2030</option>
+</select>
+
+
+        <label>Season:</label>
+        <select name="season">
+            <option value="Autumn">Autumn</option>
+            <option value="Kharif">Kharif</option>
+            <option value="Rabi">Rabi</option>
+            <option value="Summer">Summer</option>
+            <option value="Whole Year">Whole Year</option>
+            <option value="Winter">Winter</option>
+        </select>
+
+        <label>State:</label>
+        <select name="state">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+        </select>
+
+        <label>Area (hectares):</label>
+        <input type="number" name="area" step="0.01" required>
+
+        <label>Annual Rainfall (mm):</label>
+        <input type="number" name="rainfall" step="0.01" required>
+
+        <label>Production (tonnes):</label>
+        <input type="number" name="production" step="0.01" required>
+
+
+        <input type="submit" value="Predict Yield">
+    </form>
+
+    
+{% if prediction is not none %}
+    <h2>Predicted Yield: {{ prediction }} tonnes per hectare</h2>
+{% endif %}
+
+</body>
+</html>
