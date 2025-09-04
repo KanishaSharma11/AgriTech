@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="description" content="AgriTech - Empowering Agriculture Through Technology." />
+  <title>AgriTech Dashboard</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/AgriTech/images/logo.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="theme.css" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Inline Styles (can move to CSS file later) -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f6f9f6;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .loan-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .loan-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .loan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .loan-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .loan-card span {
+      display: block;
+      padding: 10px;
+      font-weight: 600;
+      background: #e8f5e9;
+    }
+
+    /* Loan Guide section */
+    .loan-guide-section {
+      text-align: center;
+      margin-top: 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-green {
+      display: inline-block;
+      background: #2e7d32;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-green:hover {
+      background: #256428;
+    }
+
+    select.language-select {
+      padding: 8px;
+      border-radius: 5px;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-nav-wrapper">
+    <header>
+      <div class="brand">
+        <img src="images/logo.png" alt="AgriTech logo" class="site-logo">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <h2>Welcome to AgriTech</h2>
+      </div>
+      <div class="header-buttons">
+        <a href="cropCalendar.html" class="calendar-button" title="Crop Calendar">
+          <span class="calendar-icon">📅</span>
+          Calendar
+        </a>
+        <a href="feed-back.html" class="feedback-button">Feedback</a>
+        <a href="index.html" class="logout-button" onclick="showLogoutConfirmation()">Logout</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+          <span class="theme-text">Light</span>
+        </button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/Crop Recommendation/templates/index.html">🌱 Crop Recommendation</a>
+        </li>
+        <li>
+          <a href="/Crop Yield Prediction/crop_yield_app/templates/index.html">📊 Yield Prediction</a>
+        </li>
+        <li><a href="disease.html">🔬 Disease Prediction</a></li>
+        <li><a href="organic.html">🌿 Organic Farming</a></li>
+        <li><a href="weather.html">⛅ Weather Check</a></li>
+        <li><a href="farmer.html">👨‍🌾 FarmChain</a></li>
+        <li><a href="Community/templates/index.html">👥 Farmar's Community</a></li>
+        <li><a href="Fertilizer_recommendation/templates/index.html">🧪 Fertilizer Prediction</a></li>
+        <li><a href="shopkeeper.html">🏪 Shopkeeper Listings</a></li>
+        <li><a href="chat.html">🤖AI ChatBot</a></li>
+        <li><a href="plantation.html">🌳 Plantation Guidance</a></li>
+        <li>
+          <a href="./Crop_Planning/templates/cropplan.html">📅 Crop Planning</a>
+        </li>
+        <li>
+          <a href="./Labour_Alerts/templates/labour.html">⚠️ Labour Scheduling</a>
+        </li>
+        <li><a href="Forum/templates/index.html">💬 Farmer Forum</a></li>
+        <li><a href="Crop_Prices_Tracker/templates/crop_price_tracker.html">📈 Crop Price Tracker</a></li>
+        <li><a href="Gov_schemes/index_scheme.html">📜 Scheme</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Section -->
+  <nav>
+    <main>
+      <div class="section-title">
+        <h2>Comprehensive Agricultural Solutions</h2>
+        <p>
+          Explore our cutting-edge tools designed to revolutionize your farming
+          experience with AI-powered insights and community collaboration.
+        </p>
+      </div>
+
+      <!-- Grid Section (Cards) -->
+      <section class="grid-container">
+        <a href="http://127.0.0.1:5501" class="grid-item">
+          <img src="images/crop.avif" alt="Crop Recommendation" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Crop Recommendation</h3>
+            <p>
+              Find the best crop to cultivate based on your soil and weather
+              conditions using advanced AI algorithms.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Recommendation</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5503" class="grid-item">
+          <img src="images/yield.avif" alt="Yield Prediction" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Yield Prediction</h3>
+            <p>
+              Predict the expected yield for different crops using advanced
+              machine learning models and historical data.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">ML Analytics</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="disease.html" class="grid-item">
+          <img src="images/disease.avif" alt="Disease Prediction" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Disease Prediction</h3>
+            <p>
+              Detect plant diseases early and get preventive measures and
+              treatment advice to protect your crops.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Early Detection</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="organic.html" class="grid-item">
+          <img src="images/organic.jpg" alt="Organic Farming Guide" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Organic Farming Guide</h3>
+            <p>
+              Learn sustainable organic practices—from soil preparation to
+              eco-friendly pest control and certification processes.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Eco-friendly</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="weather.html" class="grid-item">
+          <img src="images/weather.webp" alt="Weather check" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Weather Check</h3>
+            <p>
+              Check current weather of your place and weather for upcoming hours and days to plan your farming
+              practices.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Forecast</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="farmer.html" class="grid-item">
+          <img src="images/farmer.avif" alt="Farmer Connection" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>FarmChain</h3>
+            <p>
+              Empowering farmers by connecting them directly with buyers for fair prices, transparency, and efficient
+              agricultural trade.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">WorkFlow</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5000" class="grid-item">
+          <img src="images/farmer.jpeg" alt="Farmer Connection" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Farmer's Community</h3>
+            <p>
+              Connect with fellow farmers, share experiences, and access
+              resources to improve your farming practices.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Community</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5505" class="grid-item">
+          <img src="images/fertilizer.jpeg" alt="Farmer Connection" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Fertilizer Prediction</h3>
+            <p>
+              Get a precise recommendation on the best fertilizer for your crop
+              based on environmental and soil conditions.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Prediction</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="shopkeeper.html" class="grid-item">
+          <img src="images/shopkeeper.avif" alt="Shopkeeper Listings" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Shopkeeper Listings</h3>
+            <p>
+              Discover local shopkeepers offering quality agricultural products
+              and services tailored to your needs.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Listings</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5500" class="grid-item">
+          <img src="images/Community.jpg" alt="Community Chat" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>AI ChatBot</h3>
+            <p>
+              Get instant answers to your farming questions with our intelligent
+              chatbot. Cultivating Knowledge, Harvesting Growth.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">24/7 Support</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="plantation.html" class="grid-item">
+          <img src="images/Plantation.avif" alt="Plantation Guidance" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Plantation Guidance</h3>
+            <p>
+              Receive expert advice on plantation techniques, crop selection,
+              and sustainable farming methods.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Expert Tips</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5003" class="grid-item">
+          <img src="images/Cropplan.jpg" alt="Crop Planning" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Crop Planning</h3>
+            <p>
+              Plan your season with confidence and unlock your farm's true
+              potential for a more profitable and sustainable future.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Planning</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5012" class="grid-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStjJBgIGmDDh6NzJSUF8AmM_TuDO_MEPiOIA&s"
+            alt="Schedule Labour & Alerts" loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Labour Scheduling & Alerts</h3>
+            <p>
+              Receive real-world updates related to weather, jobs, government
+              subsidies and more to optimize your operations.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Jobs & Updates</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5506" class="grid-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/3063/3063826.png" alt="Farmer Forum" loading="lazy"
+            style="width:100%; height:200px; object-fit:cover; border-radius:8px;" />
+
+          <div class="grid-item-content">
+            <h3>Farmer Forum</h3>
+            <p>
+              A place for farmers to share their experiences, advice, and connect with peers.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Forum </span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="http://127.0.0.1:5001" class="grid-item">
+          <img src="https://d3nn873nee648n.cloudfront.net/900x600/10734/14-SP305920.jpg" alt="Crop Price Tracker"
+            loading="lazy" />
+          <div class="grid-item-content">
+            <h3>Crop Price Tracker</h3>
+            <p>
+              Track real-time mandi prices for crops across states and markets
+              to make informed selling decisions.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Prices</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="Gov_schemes/index_scheme.html" class="grid-item">
+          <img src="images/Scheme.jpg" alt="Farmer Forum" loading="lazy"
+            style="width:100%; height:200px; object-fit:cover; border-radius:8px;" />
+
+          <div class="grid-item-content">
+            <h3>Schemes </h3>
+            <p>
+              Government schemes provide farmers with financial support, subsidies, insurance, and resources to boost
+              productivity, sustainability, and income.
+            </p>
+            <div class="grid-item-footer">
+              <span class="feature-badge">Scheme</span>
+              <span class="arrow-icon">→</span>
+            </div>
+          </div>
+        </a>
+
+      </section>
+
+      <body>
+        <div class="container">
+          <header>
+            <h1>Smart Loan Eligibility Checker for Farmers</h1>
+            <p>Select the type of loan you want to apply for:</p>
+          </header>
+
+          <div class="loan-cards">
+            <div class="loan-card" data-type="crop">
+              <img
+                src="https://5.imimg.com/data5/SELLER/Default/2024/2/389292204/CR/MJ/TT/191214086/fresh-wheat-crop.webp"
+                alt="Crop Cultivation">
+              <span>Crop Cultivation</span>
+            </div>
+            <div class="loan-card" data-type="equipment">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1DzqFJ-uX4N9Hm1AO-o88YUgG40sl6WPJTg&s"
+                alt="Farm Equipment">
+              <span>Farm Equipment</span>
+            </div>
+            <div class="loan-card" data-type="water">
+              <img
+                src="https://img-cdn.publive.online/fit-in/1200x675/filters:format(webp)/saur-energy/media/post_attachments/2017/06/Solar-Pump-Irrigators.jpg"
+                alt="Water Source">
+              <span>Water Source Development</span>
+            </div>
+            <div class="loan-card" data-type="land">
+              <img src="https://genuineplots.com/images/propertytype/featured1-compressed.jpg" alt="Land Purchase">
+              <span>Land Purchase</span>
+            </div>
+          </div>
+
+          <!-- Loan Guide Redirect Section -->
+          <section id="loan-guide" class="loan-guide-section">
+            <h2 class="hi">Smart Loan Eligibility Checker</h2>
+            <p class="hi">Get step-by-step assistance for applying for agricultural loans.</p>
+            <div style="margin-top: 20px;">
+              <a href="smart_loan.html" class="btn-green" id="goLoanGuide" style="margin-right: 20px;">Go to Smart Loan
+                Guide</a>
+              <label for="languageSelect" class="hi">Language:</label>
+              <select id="languageSelect" class="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+              </select>
+            </div>
+
+          </section>
+        </div>
+
+        <script>
+          document.getElementById('goLoanGuide').addEventListener('click', function (event) {
+            event.preventDefault();
+            const lang = document.getElementById('languageSelect').value;
+            window.location.href = `smart_loan.html?lang=${lang}`;
+          });
+        </script>
+    </main>
+  </nav>
+  <!-- Footer -->
+  <style>
+    .site-footer {
+      background: linear-gradient(135deg, #2e7d32, #66bb6a);
+      color: #fff;
+      margin-top: auto;
+      padding: 2rem 1.25rem;
+    }
+
+    .site-footer .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #fff;
+      padding: 4px
+    }
+
+    .site-footer h3,
+    .site-footer h4 {
+      margin: 0 0 .5rem 0
+    }
+
+    .site-footer p {
+      margin: 0;
+      opacity: 0.9
+    }
+
+    .site-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.9;
+      width: max-content;
+      background-color: none;
+    }
+
+    .site-footer a:hover {
+      opacity: 1;
+      text-decoration: underline
+    }
+
+    /* .footer-bottom{max-width:1200px;margin:1rem auto 0; padding-top:1rem; border-top:1px solid rgba(255, 255, 255, 0); text-align:center; font-size:2rem; opacity:9} */
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-media {
+      display: flex;
+      gap: 1rem;
+      margin-top: .5rem
+    }
+
+    .social-media a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 50%;
+      transition: all .3s ease;
+      font-size: 1.2rem
+    }
+
+    .social-media a:hover {
+      background: rgba(255, 255, 255, .2);
+      transform: translateY(-2px)
+    }
+  </style>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="AgriTech logo" class="footer-logo">
+        <h3>AgriTech</h3>
+        <p>Empowering India's Farming Future</p>
+        <div class="social-media">
+          <a href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/omroy07" target="_blank" aria-label="View our GitHub repositories">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/om-roy-3b809628a/" target="_blank"
+            aria-label="Connect with us on LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="main.html">Dashboard</a></li>
+          <li><a href="feed-back.html">Feedback</a></li>
+          <li><a href="chat.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="Crop Recommendation/templates/index.html">Crop Recommendation</a></li>
+          <li><a href="Crop Yield Prediction/crop_yield_app/templates/index.html">Yield Prediction</a></li>
+          <li><a href="disease.html">Disease Detector</a></li>
+          <li><a href="Crop_Planning/templates/cropplan.html">Crop Planner</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@agritech.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: 123 Green Fields, Agricultural Park, New Delhi, India - 110001</p>
+      </div>
+    </div>
+    <p style="margin-top: 2rem; opacity: 0.8">
+      &copy; 2025 AgriTech | Empowering India's Farming Future 🇮🇳
+    </p>
+  </footer>
+  <script src="main.js"></script>
+  <script src="theme.js"></script>
+  <!-- <script src="auth.js"></script> -->
+  <script>
+    // Check authentication on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!requireAuth()) {
+        return;
+      }
+      const currentUser = window.authManager.getCurrentUser();
+      if (currentUser) {
+        // Update header to show user name
+        const headerTitle = document.querySelector('header h2');
+        if (headerTitle) {
+          headerTitle.textContent = `Welcome to AgriTech, ${currentUser.fullname}!`;
+        }
+      }
+    });
+
+    function showLogoutConfirmation() {
+      Swal.fire({
+        title: 'Confirm Logout',
+        text: 'Are you sure you want to logout?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, logout',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const logoutResult = window.authManager.logout();
+          if (logoutResult.success) {
+            showAuthMessage(logoutResult.message, 'success');
+            setTimeout(() => {
+              window.location.href = 'index.html';  // Redirect here after logout
+            }, 1000);
+          }
+        }
+      });
+    }
+
+  </script>
+
+
+</body>
+
+</html>
