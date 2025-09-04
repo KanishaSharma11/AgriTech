@@ -57,3 +57,34 @@ Backend: Node.js / Express.js / Flask
 
 Machine Learning: Python, scikit-learn, TensorFlow, Keras
 
+
+
+---
+
+## 🌍 Future Outcomes
+
+Strengthen farmer support with AI-driven insights.
+
+Expand datasets for more accurate recommendations.
+
+Integrate offline support for rural farmers.
+
+Build scalable cloud hosting for nationwide adoption.
+
+
+
+---
+
+## ⚡ Challenges
+
+Reliable data collection from diverse regions.
+
+Hosting AgriTech platforms for large-scale use.
+
+Managing server load with growing users.
+
+Making technology accessible to rural farmers.
+
+
+
+---
