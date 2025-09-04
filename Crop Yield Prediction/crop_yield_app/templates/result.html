@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div id="themeToggle" class="theme-toggle">🌙</div>
+  <div class="result-box">
+    {% if error %}
+    <h2 class="error">{{ error }}</h2>
+    {% else %}
+    <h2>Crop: {{ crop }}</h2>
+    <p>Predicted Yield: <strong>{{ prediction }}</strong> tonnes</p>
+    {% endif %}
+    <a href="/" class="btn">← Back</a>
+  </div>
+</body>
+<script src="{{ url_for('static', filename='js/theme-toggle.js') }}"></script>
+
+</html>

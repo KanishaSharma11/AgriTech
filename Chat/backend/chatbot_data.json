@@ -1,0 +1,97 @@
+{
+  "greetings": [
+    "Hello!",
+    "Hi there!",
+    "Greetings!",
+    "Welcome!"
+  ],
+  "farewells": [
+    "Goodbye!",
+    "See you later!",
+    "Take care!",
+    "Have a nice day!"
+  ],
+  "qas": [
+    {
+      "question": "What is the weather today?",
+      "answer": "It's sunny today with mild breeze."
+    },
+    {
+      "question": "What crops should I plant?",
+      "answer": "Maize and wheat are ideal for this season."
+    },
+    {
+      "question": "How to control pests?",
+      "answer": "Neem oil works well as a natural pesticide."
+    },
+    {
+      "question": "How can agricultural technology help improve crop yield?",
+      "answer": "Agricultural technology like precision farming optimizes resources and improves yields by real-time data analysis."
+    },
+    {
+      "question": "What is precision agriculture?",
+      "answer": "Precision agriculture uses GPS, sensors, and data analytics to manage crops efficiently."
+    },
+    {
+      "question": "How does IoT benefit farming?",
+      "answer": "IoT devices monitor soil moisture, weather, and pests, enabling timely actions."
+    },
+    {
+      "question": "Tell me about organic farming.",
+      "answer": "Organic farming uses natural methods avoiding synthetic chemicals to improve sustainability."
+    },
+    {
+      "question": "What irrigation methods conserve water?",
+      "answer": "Drip and sprinkler irrigation methods are effective for water conservation."
+    },
+    {
+      "question": "How to improve soil health?",
+      "answer": "Use crop rotation, add organic matter, and reduce chemical inputs."
+    },
+    {
+      "question": "What role do drones play in agriculture?",
+      "answer": "Drones provide aerial imaging to monitor crop health and manage fields."
+    },
+    {
+      "question": "What is crop rotation?",
+      "answer": "Crop rotation is the practice of growing different crops sequentially to improve soil health and reduce pests."
+    },
+    {
+      "question": "How can data analytics improve farming?",
+      "answer": "Data analytics help predict weather, optimize irrigation, and detect crop diseases early."
+    },
+    {
+      "question": "What is smart farming?",
+      "answer": "Smart farming integrates IoT, AI, and robotics to automate and improve farm operations."
+    },
+    {
+      "question": "How to reduce post-harvest crop loss?",
+      "answer": "Use proper storage, cold chains, and timely transport to reduce losses."
+    },
+    {
+      "question": "What is the importance of soil testing?",
+      "answer": "Soil testing helps determine nutrient needs, improving fertilization efficiency and crop yield."
+    },
+    {
+      "question": "What are biofertilizers?",
+      "answer": "Biofertilizers contain living microorganisms that enhance nutrient availability to plants."
+    },
+    {
+      "question": "How does climate change affect agriculture?",
+      "answer": "Climate change causes erratic weather, droughts, and pest outbreaks affecting yields."
+    },
+    {
+      "question": "What are integrated pest management practices?",
+      "answer": "Using biological control, crop rotation, and minimal chemicals to manage pests sustainably."
+    },
+    {
+      "question": "What is hydroponics?",
+      "answer": "Hydroponics is growing plants in nutrient-rich water without soil."
+    },
+    {
+      "question": "How to use AI in agriculture?",
+      "answer": "AI helps in crop monitoring, yield prediction, and automated machinery control."
+    }
+  ],
+  "default_answer": "Sorry, I don't have information on that topic. Please ask about weather, crops, pests, or farming technology."
+}

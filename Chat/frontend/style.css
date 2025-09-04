@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e9f7ef;
+  padding: 20px;
+}
+
+#root {
+  max-width: 600px;
+  margin: auto;
+}
+
+.chat-window {
+  border: 1px solid #4caf50;
+  background: white;
+  height: 400px;
+  overflow-y: auto;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message.user {
+  text-align: right;
+  color: #1a73e8;
+}
+
+.message.bot {
+  text-align: left;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.back-button {
+  background-color: #4CAF50;
+  /* A shade of green */
+  color: white;
+  /* Ensures the text is readable */
+  text-decoration: none;
+  /* Removes the underline from the link */
+  padding: 10px 15px;
+  /* Adds spacing inside the button */
+  border-radius: 5px;
+  /* Rounds the corners */
+}
+
+.back-button:hover {
+  background-color: #45a049;
+  /* A slightly darker green for the hover effect */
+}

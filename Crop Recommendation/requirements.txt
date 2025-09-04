@@ -1,0 +1,6 @@
+# PDF generation
+reportlab
+flask
+joblib
+numpy
+scikit-learn

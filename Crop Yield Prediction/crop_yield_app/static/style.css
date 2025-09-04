@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f2e6;
+  /* Light green background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #2e7d32;
+  /* Dark green */
+  margin-top: 30px;
+  text-shadow: 1px 1px 2px #a5d6a7;
+}
+
+form {
+  background-color: #ffffffdd;
+  /* Slightly transparent white */
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 15px;
+  /* More rounded */
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+  /* green tinted shadow */
+  width: 350px;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1.5px solid #a5d6a7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 5px #81c784;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: #388e3c;
+  /* Medium green */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #1b5e20;
+  /* Darker green */
+}
+
+h2 {
+  color: #2e7d32;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.back-button {
+  background-color: #4CAF50;
+  /* A shade of green */
+  color: white;
+  /* Ensures the text is readable */
+  text-decoration: none;
+  /* Removes the underline from the link */
+  padding: 10px 15px;
+  /* Adds spacing inside the button */
+  border-radius: 5px;
+  /* Rounds the corners */
+}
+
+.back-button:hover {
+  background-color: #45a049;
+  /* A slightly darker green for the hover effect */
+}
