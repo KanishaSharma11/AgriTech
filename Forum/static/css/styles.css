@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #F0FBF2;
+  color: #1F4B2A;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.btn-back {
+  background: #388E3C;
+  color: #FFF;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: #2E7D32;
+}
+
+.forum-form {
+  background: #E3F6E3;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.post-input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #AED9A1;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #1F4B2A;
+}
+
+.post-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.forum-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.post-btn {
+  padding: 14px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.post-btn:disabled {
+  background: #A5D6A7;
+  cursor: not-allowed;
+}
+
+.post-btn:hover:not(:disabled) {
+  background: #388E3C;
+}
+
+.post {
+  background: #FFFFFF;
+  border-left: 5px solid #4CAF50;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+}
+
+.post strong {
+  color: #2E7D32;
+  font-size: 16px;
+}
+
+.post span {
+  float: right;
+  font-size: 13px;
+  color: #6B8E23;
+}
+
+.post p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .post-input {
+    font-size: 14px;
+  }
+
+  .btn-back {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+.back-button {
+  background-color: #4CAF50;
+  /* A shade of green */
+  color: white;
+  /* Ensures the text is readable */
+  text-decoration: none;
+  /* Removes the underline from the link */
+  padding: 10px 15px;
+  /* Adds spacing inside the button */
+  border-radius: 5px;
+  /* Rounds the corners */
+}
+
+.back-button:hover {
+  background-color: #45a049;
+  /* A slightly darker green for the hover effect */
+}

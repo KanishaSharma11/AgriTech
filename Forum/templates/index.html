@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AgriTech Farmer Forum</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Farmer Forum</h1>
+      <a href="../../main.html" class="btn-back">Back to Main</a>
+      <a href="javascript:history.back()" class="back-button">Back</a>
+    </header>
+    <section class="forum-form">
+      <input id="nameInput" type="text" placeholder="Your Name" required>
+      <textarea id="messageInput" placeholder="Share your experience..." required></textarea>
+      <button id="postButton" disabled>Post</button>
+    </section>
+    <h2>Recent Posts</h2>
+    <div id="postsContainer"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

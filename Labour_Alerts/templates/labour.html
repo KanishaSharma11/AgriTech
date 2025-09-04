@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Labour & News Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <header class="navbar">
+    <h1>Labour & News Dashboard</h1>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <a href="javascript:history.back()" class="back-button">Back</a>
+  </header>
+  <div class="container">
+    <div class="card form-card">
+      <h2>Post Labour Requirement</h2>
+      <div class="form-row">
+        <label>Type of Work: <select id="work_type">
+            <option value="">Select</option>
+            <option>Harvesting</option>
+            <option>Planting</option>
+          </select></label>
+        <label>Number of People: <input type="number" id="number"></label>
+      </div>
+      <div class="form-row">
+        <label>Date Needed: <input type="date" id="date_needed"></label>
+        <label>Duration (Days): <input type="number" id="duration" min="1" value="1"></label>
+      </div>
+      <div class="form-row">
+        <label>Village Name: <input type="text" id="village"></label>
+        <label>Taluka / District: <input type="text" id="taluka"></label>
+      </div>
+      <button id="postBtn" disabled>Post Requirement</button>
+    </div>
+
+    <div class="card alerts-card">
+      <h2>Alerts</h2>
+      <ul id="alertsList"></ul>
+    </div>
+
+    <div class="card news-card">
+      <h2>Latest News</h2>
+      <ul id="newsList"></ul>
+    </div>
+
+    <div class="card recent-card">
+      <h2>Recent Requirements</h2>
+      <div id="postsContainer"></div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/labour.js') }}"></script>
+</body>
+
+</html>

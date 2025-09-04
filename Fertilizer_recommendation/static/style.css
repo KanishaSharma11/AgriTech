@@ -1,0 +1,158 @@
+:root {
+    --background: #181818;
+    --card-bg: #212325;
+    --text: #e2e2e2;
+    --accent: #44C767;
+    --danger: #cc3333;
+    --input-bg: #292c31;
+}
+
+[data-theme="light"] {
+    --background: #f6f8fa;
+    --card-bg: #fff;
+    --text: #222;
+    --accent: #44C767;
+    --danger: #cc3333;
+    --input-bg: #ececec;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+form {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 520px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px 0 #00000022;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    background: var(--input-bg);
+    color: var(--text);
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--accent);
+}
+
+button[type="submit"] {
+    background: var(--accent);
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #369758;
+}
+
+.result {
+    max-width: 520px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: #113d23;
+    color: #c7f9e5;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.result.error {
+    background: #2b1b18;
+    color: var(--danger);
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#toggle-theme:hover {
+    color: #3ecb69;
+}
+
+@media (max-width: 600px) {
+
+    form,
+    .result {
+        max-width: 97vw;
+        padding: 1rem;
+    }
+
+    #toggle-theme {
+        right: 18px;
+    }
+}
+
+.back-button {
+    background-color: #4CAF50;
+    /* A shade of green */
+    color: white;
+    /* Ensures the text is readable */
+    text-decoration: none;
+    /* Removes the underline from the link */
+    padding: 10px 15px;
+    /* Adds spacing inside the button */
+    border-radius: 5px;
+    /* Rounds the corners */
+}
+
+.back-button:hover {
+    background-color: #45a049;
+    /* A slightly darker green for the hover effect */
+}

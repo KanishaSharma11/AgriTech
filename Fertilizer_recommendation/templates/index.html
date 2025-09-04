@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fertilizer Recommendation System 🌱</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>🌾 Fertilizer Recommendation System</h1>
+        <p class="subtitle">Fill in the following information to get the most suitable fertilizer recommendation.</p>
+        <button id="toggle-theme">🌙 Dark Mode</button>
+    </header>
+    <form id="fertilizer-form">
+        <section>
+            <h2>📋 Environmental Conditions</h2>
+            <label>Temperature (°C): <input type="number" name="Temparature" required /></label>
+            <label>Humidity (%): <input type="number" name="Humidity " required /></label>
+            <label>Moisture (%): <input type="number" name="Moisture" required /></label>
+        </section>
+        <section>
+            <h2>🌱 Soil and Crop Details</h2>
+            <label>Soil Type:
+                <select name="Soil Type" required>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Loamy">Loamy</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Clayey">Clayey</option>
+                </select>
+            </label>
+            <label>Crop Type:
+                <select name="Crop Type" required>
+                    <option value="Maize">Maize</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Tobacco">Tobacco</option>
+                    <option value="Paddy">Paddy</option>
+                    <option value="Barley">Barley</option>
+                    <option value="Wheat">Wheat</option>
+                    <option value="Millets">Millets</option>
+                    <option value="Oil seeds">Oil seeds</option>
+                    <option value="Pulses">Pulses</option>
+                    <option value="Ground Nuts">Ground Nuts</option>
+                </select>
+            </label>
+        </section>
+        <section>
+            <h2>🧪 Soil Nutrient Levels</h2>
+            <label>Nitrogen (N): <input type="number" name="Nitrogen" required /></label>
+            <label>Potassium (K): <input type="number" name="Potassium" required /></label>
+            <label>Phosphorous (P): <input type="number" name="Phosphorous" required /></label>
+        </section>
+        <button type="submit" id="submit-btn">Recommend Fertilizer</button>
+        <a href="javascript:history.back()" class="back-button">Back</a>
+    </form>
+    <div id="result" class="result"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

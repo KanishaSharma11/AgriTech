@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Planner AI</title>
+    <link rel="icon" type="image/png" href="/AgriTech/images/logo.png">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../../theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="three-canvas"></canvas>
+    </div>
+    
+    <div class="form-progress" id="progress-bar"></div>
+    
+    <nav class="navbar">
+      <a href="javascript:history.back()" class="back-btn" aria-label="Go back">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-left"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </a>
+      <h2 class="navbar-title">Crop Planner AI</h2>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode" style="background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white;">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+        <span class="theme-text">Light</span>
+      </button>
+    </nav>
+
+    <div class="container">
+      <h1>🌿 Crop Planner AI</h1>
+      <p class="subtitle">Enter your farm's details to get an AI-powered crop planner with comprehensive growing guidelines.</p>
+      
+      <form id="crop-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="ph">Soil pH</label>
+            <input
+              type="number"
+              id="ph"
+              name="pH"
+              step="0.1"
+              min="0"
+              max="14"
+              required
+              placeholder="e.g., 6.8"
+            />
+            <div class="error-message">Please enter a valid pH value (0-14)</div>
+          </div>
+
+          <div class="form-group">
+            <label for="temperature">Temperature (°C)</label>
+            <input
+              type="number"
+              id="temperature"
+              name="Temperature"
+              step="0.1"
+              min="-10"
+              max="50"
+              required
+              placeholder="e.g., 28.5"
+            />
+            <div class="error-message">Please enter a valid temperature</div>
+          </div>
+
+          <div class="form-group">
+            <label for="rainfall">Rainfall (mm)</label>
+            <input
+              type="number"
+              id="rainfall"
+              name="Rainfall"
+              step="1"
+              min="0"
+              required
+              placeholder="e.g., 650"
+            />
+            <div class="error-message">Please enter a valid rainfall amount</div>
+          </div>
+
+          <div class="form-group">
+            <label for="soil-type">Soil Type</label>
+            <select id="soil-type" name="Soil_Type" required>
+              <option value="">Select soil type...</option>
+              <option value="Black">Black Soil</option>
+              <option value="Loamy">Loamy Soil</option>
+              <option value="Clay">Clay Soil</option>
+              <option value="Sandy">Sandy Soil</option>
+            </select>
+            <div class="error-message">Please select a soil type</div>
+          </div>
+
+          <div class="form-group">
+            <label for="season">Season</label>
+            <select id="season" name="Season" required>
+              <option value="">Select season...</option>
+              <option value="Monsoon">Monsoon</option>
+              <option value="Winter">Winter</option>
+              <option value="Summer">Summer</option>
+            </select>
+            <div class="error-message">Please select a season</div>
+          </div>
+
+          <div class="form-group">
+            <label for="market-demand">Market Demand</label>
+            <select id="market-demand" name="Market_Demand" required>
+              <option value="">Select demand level...</option>
+              <option value="High">High Demand</option>
+              <option value="Medium">Medium Demand</option>
+              <option value="Low">Low Demand</option>
+            </select>
+            <div class="error-message">Please select market demand level</div>
+          </div>
+
+          <div class="form-group">
+            <label for="fertilizer">Fertilizer Used</label>
+            <select id="fertilizer" name="Fertilizer_Used" required>
+              <option value="">Select fertilizer...</option>
+              <option value="Urea+DAP">Urea + DAP</option>
+              <option value="NPK 10-26-26">NPK 10-26-26</option>
+              <option value="Single Super Phosphate">Single Super Phosphate</option>
+              <option value="None">No Fertilizer</option>
+            </select>
+            <div class="error-message">Please select a fertilizer option</div>
+          </div>
+
+          <div class="form-group">
+            <label for="pest-issue">Pest Issue</label>
+            <select id="pest-issue" name="Pest_Issue" required>
+              <option value="">Select pest status...</option>
+              <option value="None">No Pest Issues</option>
+              <option value="Bollworm">Bollworm</option>
+              <option value="Stem Borer">Stem Borer</option>
+              <option value="Aphids">Aphids</option>
+            </select>
+            <div class="error-message">Please select pest issue status</div>
+          </div>
+
+          <div class="form-group">
+            <label for="irrigation">Irrigation Method</label>
+            <select id="irrigation" name="Irrigation_Method" required>
+              <option value="">Select irrigation method...</option>
+              <option value="Drip">Drip Irrigation</option>
+              <option value="Canal">Canal Irrigation</option>
+              <option value="Rainfed">Rainfed</option>
+              <option value="Sprinkler">Sprinkler Irrigation</option>
+            </select>
+            <div class="error-message">Please select an irrigation method</div>
+          </div>
+        </div>
+
+        <button type="submit" class="predict-btn" id="submit-btn">
+          Get Full Farming Plan
+        </button>
+      </form>
+
+      <div id="result-container" class="hidden">
+        <h2>🎯 Recommended Crop:</h2>
+        <p id="result-text">...</p>
+        
+        <div id="guide-container">
+          <h3 id="guide-title"></h3>
+          <div class="guide-grid">
+            <div class="guide-item">
+              <h4>🗓️ Timeline (Plant & Harvest)</h4>
+              <p id="guide-timeline">Optimal planting and harvesting schedule for maximum yield</p>
+            </div>
+            
+            <div class="guide-item">
+              <h4>🌱 How to Plant</h4>
+              <p id="guide-how-to-plant">Step-by-step planting guidelines and best practices</p>
+            </div>
+            
+            <div class="guide-item">
+              <h4>💊 Fertilizer Plan</h4>
+              <p id="guide-fertilizer">Customized fertilization schedule and recommendations</p>
+            </div>
+            
+            <div class="guide-item">
+              <h4>🌧️ Ideal Rainfall</h4>
+              <p id="guide-ideal-rainfall">Water requirements and irrigation guidelines</p>
+            </div>
+            
+            <div class="guide-item">
+              <h4>📦 Post-Harvest Plan</h4>
+              <p id="guide-post-harvest">Storage, processing, and marketing strategies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../static/script.js"></script>
+    <script src="../../theme.js"></script>
+    <style>
+      .site-footer {background: linear-gradient(135deg,#2e7d32,#66bb6a); color:#fff; margin-top:auto; padding: 2rem 1.25rem;}
+      .site-footer .footer-inner {max-width:1200px;margin:0 auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; align-items:flex-start;}
+      .footer-brand {display:flex;flex-direction:column;gap:.5rem}
+      .footer-logo {width:48px;height:48px;border-radius:8px;object-fit:cover;background:#fff;padding:4px}
+      .site-footer h3,.site-footer h4{margin:0 0 .5rem 0}
+      .site-footer p {margin:0;opacity:.9}
+      .site-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem}
+      .site-footer a{color:#fff;text-decoration:none;opacity:.9;transition:opacity .2s}
+      .site-footer a:hover{opacity:1;text-decoration:underline}
+      .footer-bottom{max-width:1200px;margin:1rem auto 0; padding-top:1rem; border-top:1px solid rgba(255,255,255,.25); text-align:center; font-size:.9rem; opacity:.9}
+    </style>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="/AgriTech/images/logo.png" alt="AgriTech logo" class="footer-logo">
+          <h3>AgriTech</h3>
+          <p>Empowering India's Farming Future</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/main.html">Dashboard</a></li>
+            <li><a href="/feed-back.html">Feedback</a></li>
+            <li><a href="/chat.html">AI Assistant</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/Crop%20Recommendation/templates/index.html">Crop Recommendation</a></li>
+            <li><a href="/Crop%20Yield%20Prediction/crop_yield_app/templates/index.html">Yield Prediction</a></li>
+            <li><a href="/Disease%20prediction/template/index.html">Disease Detector</a></li>
+            <li><a href="/Crop_Planning/templates/cropplan.html">Crop Planner</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 AgriTech • Made for farmers</div>
+    </footer>
+  </body>
+</html>
