@@ -1,0 +1,228 @@
+/* ==========================
+   GLOBAL
+========================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  transition: var(--transition);
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: var(--primary-green);
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 1.8rem 1.5rem 2rem;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+header h1.header {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Theme Toggle + Back */
+.theme-toggle,
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
+}
+
+.back-button {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ==========================
+   CONTENT SECTIONS
+========================== */
+section {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+section:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+section h2 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--dark-green);
+}
+
+section p {
+  margin: 0.5rem 0 1rem;
+  color: var(--text-secondary);
+}
+
+section ul {
+  margin: 0.5rem 0 1.2rem 1.2rem;
+}
+
+section ul li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+section a {
+  color: var(--primary-green);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+section a:hover {
+  text-decoration: underline;
+  color: var(--dark-green);
+}
+
+/* ==========================
+   DARK MODE ADJUSTMENTS
+========================== */
+[data-theme="dark"] header {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+}
+
+[data-theme="dark"] section {
+  background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] nav ul li a:hover {
+  background: rgba(255,255,255,0.15);
+}
+/* ==========================
+   FOOTER (Minimal Style)
+========================== */
+footer {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
+
+/* Make the 🌾 emoji stand out a little */
+footer p span {
+  font-size: 1.1rem;
+  margin-left: 4px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] footer {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: #f1f1f1;
+}
