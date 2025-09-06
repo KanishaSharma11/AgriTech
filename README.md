@@ -111,6 +111,6 @@ Making technology accessible to rural farmers.
 
 Om Roy - Project Admin and ML Developer
 
-Shubhangi Roy - ML Developer
+Shubhangi Roy - ML and Web Developer
 
-Kanisha Ravindra Sharma - ML Developer
+Kanisha Ravindra Sharma - ML and Backend Developer
