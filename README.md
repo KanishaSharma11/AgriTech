@@ -43,7 +43,7 @@ AgriTech is an AI-powered platform revolutionizing agriculture by solving challe
 
 📜 Schemes Portal – Updates farmers on government schemes.
 
-🏦 Loan Eligibility Predictor – Helps farmers assess loan qualification.
+🏦 Loan Eligibility Checker – Helps farmers assess loan qualification.
 
 
 
@@ -51,11 +51,13 @@ AgriTech is an AI-powered platform revolutionizing agriculture by solving challe
 
 ## 🏗 Tech Stack
 
-Frontend: HTML / CSS/ JavaScript / 
+Frontend: HTML, CSS, JavaScript 
 
-Backend: Node.js / Express.js / Flask
+Backend: Flask, API
 
-Machine Learning: Python, scikit-learn, TensorFlow, Keras
+Machine Learning: Python, scikit-learn, TensorFlow, Keras, NumPy, Pandas, Matplotlib, Seaborn
+
+Deep Learning: Convolutional Neural Networks, VCG16
 
 
 
