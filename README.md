@@ -59,7 +59,7 @@ AgriTech is an AI-powered platform revolutionizing agriculture by solving challe
 
 Frontend: HTML, CSS, JavaScript 
 
-Backend: Flask, API
+Backend: Flask, API, JavaScript
 
 Machine Learning: Python, scikit-learn, TensorFlow, Keras, NumPy, Pandas, Matplotlib, Seaborn
 
