@@ -106,3 +106,11 @@ Making technology accessible to rural farmers.
 
 
 ---
+
+## 🤜🤛 Team
+
+Om Roy - Project Admin and ML Developer
+
+Shubhangi Roy - ML Developer
+
+Kanisha Ravindra Sharma - ML Developer
