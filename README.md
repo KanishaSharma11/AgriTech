@@ -9,6 +9,8 @@ AgriTech is an AI-powered platform revolutionizing agriculture by solving challe
 
 ![AgriTech Login Page](https://github.com/KanishaSharma11/AgriTech/blob/main/image/Login%20Page.jpg)
 
+![AgriTech Home Page](https://github.com/KanishaSharma11/AgriTech/blob/main/image/Home%20Page.jpg)
+
 ## 🚀 Features
 
 🔑 SignUp System – Register and personalize the platform based on preferences.
