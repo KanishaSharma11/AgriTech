@@ -63,6 +63,16 @@ Deep Learning: Convolutional Neural Networks, VCG16
 
 ---
 
+## 🏗 Datasets
+
+Crop Recommendation: https://www.kaggle.com/code/niteshhalai/crop-recommendation-dataset/input
+
+Crop Disease Prediction: https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
+
+
+
+---
+
 ## 🌍 Future Outcomes
 
 Strengthen farmer support with AI-driven insights.
