@@ -1,15 +1,15 @@
-# 🌱 AgriTech Platform
+# 🌱 KrishiSetu Platform
 
-AgriTech is an AI-powered platform revolutionizing agriculture by solving challenges from seed to harvest & beyond. It provides farmers, shopkeepers, and communities with all-in-one agricultural solutions for smarter, data-driven farming.
+KrishiSetu is an AI-powered platform revolutionizing agriculture by solving challenges from seed to harvest & beyond. It provides farmers, shopkeepers, and communities with all-in-one agricultural solutions for smarter, data-driven farming.
 
 
 ---
 
 ## 📷 Preview
 
-![AgriTech Login Page](https://github.com/KanishaSharma11/AgriTech/blob/main/image/Login%20Page.jpg)
+![KrishiSetu Login Page](https://github.com/KanishaSharma11/KrishiSetu/blob/main/image/Login%20Page.jpg)
 
-![AgriTech Home Page](https://github.com/KanishaSharma11/AgriTech/blob/main/image/Home%20Page.jpg)
+![KrishiSetu Home Page](https://github.com/KanishaSharma11/KrishiSetu/blob/main/image/Home%20Page.jpg)
 
 ## 🚀 Features
 
@@ -35,7 +35,7 @@ AgriTech is an AI-powered platform revolutionizing agriculture by solving challe
 
 🛒 Shopkeeper Listings – Provides access to agricultural suppliers.
 
-🤖 AgriTech Chatbot – Offers instant query support with AI.
+🤖 KrishiSetu Chatbot – Offers instant query support with AI.
 
 🌿 Plantation Guidance – Helps in planning plantation methods.
 
@@ -97,7 +97,7 @@ Build scalable cloud hosting for nationwide adoption.
 
 Reliable data collection from diverse regions.
 
-Hosting AgriTech platforms for large-scale use.
+Hosting KrishiSetu platforms for large-scale use.
 
 Managing server load with growing users.
 
