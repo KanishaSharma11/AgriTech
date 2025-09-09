@@ -91,6 +91,86 @@
     {
       "question": "How to use AI in agriculture?",
       "answer": "AI helps in crop monitoring, yield prediction, and automated machinery control."
+    },
+    {
+      "question": "What is the best fertilizer for rice?",
+      "answer": "Nitrogen-rich fertilizers like urea are important, but balanced use of phosphorus and potassium is also necessary."
+    },
+    {
+      "question": "How do I check soil fertility?",
+      "answer": "Conduct a soil test in a certified lab to measure pH, nutrients, and organic matter."
+    },
+    {
+      "question": "Why is pH important in soil?",
+      "answer": "Soil pH affects nutrient availability—most crops grow best between pH 6.0 and 7.5."
+    },
+    {
+      "question": "What crops grow well in sandy soil?",
+      "answer": "Groundnuts, carrots, and potatoes grow well in sandy soils with good drainage."
+    },
+    {
+      "question": "How often should I water tomato plants?",
+      "answer": "Tomatoes need consistent moisture; water 2–3 times a week depending on soil type and weather."
+    },
+    {
+      "question": "What is rainwater harvesting in farming?",
+      "answer": "It’s the collection of rainwater for irrigation, reducing dependence on groundwater."
+    },
+    {
+      "question": "How does drip irrigation save water?",
+      "answer": "It delivers water directly to the plant roots, reducing evaporation and runoff."
+    },
+    {
+      "question": "How to identify nitrogen deficiency in plants?",
+      "answer": "Leaves turn yellow, especially the older ones, if nitrogen is low."
+    },
+    {
+      "question": "What are natural ways to control aphids?",
+      "answer": "Ladybugs, neem oil spray, and garlic extract work as natural aphid controls."
+    },
+    {
+      "question": "How do I prevent fungal diseases in crops?",
+      "answer": "Ensure good air circulation, avoid overwatering, and use resistant crop varieties."
+    },
+    {
+      "question": "What is vertical farming?",
+      "answer": "Vertical farming grows crops in stacked layers, often using hydroponics or aeroponics."
+    },
+    {
+      "question": "How do sensors help in farming?",
+      "answer": "Sensors track soil moisture, temperature, and nutrients for precise farm management."
+    },
+    {
+      "question": "Can blockchain be used in agriculture?",
+      "answer": "Yes, blockchain ensures transparent supply chains and reduces food fraud."
+    },
+    {
+      "question": "What are autonomous tractors?",
+      "answer": "These are self-driving tractors that use GPS and AI to perform farming tasks."
+    },
+    {
+      "question": "What is sustainable farming?",
+      "answer": "It balances productivity with environmental care using eco-friendly methods."
+    },
+    {
+      "question": "How can farmers adapt to climate change?",
+      "answer": "By using drought-resistant seeds, efficient irrigation, and diversifying crops."
+    },
+    {
+      "question": "Why is biodiversity important in farming?",
+      "answer": "Biodiversity improves soil health, pest control, and ecosystem stability."
+    },
+    {
+      "question": "What is cold chain storage?",
+      "answer": "It’s a temperature-controlled supply chain to keep perishable crops fresh."
+    },
+    {
+      "question": "How to reduce food waste after harvesting?",
+      "answer": "Use proper packaging, cold storage, and timely distribution."
+    },
+    {
+      "question": "What is contract farming?",
+      "answer": "An agreement where farmers grow crops for companies at pre-agreed prices."
     }
   ],
   "default_answer": "Sorry, I don't have information on that topic. Please ask about weather, crops, pests, or farming technology."
